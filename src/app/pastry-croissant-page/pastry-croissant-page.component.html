@@ -1,0 +1,112 @@
+<body id="body">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 pt-5 pb-5">
+                <div class="product-gallery">
+                    <!-- Main Image Slider -->
+                    <div id="detail-main-slider" class="splide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li *ngFor="let image of images" class="splide__slide text-center">
+                                    <a [attr.data-fancybox]="'gallery'" [href]="image">
+                                    <img [src]="image" alt="Product Image" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Thumbnails -->
+                    <div id="detail-thumbnail-slider" class="splide mt-3">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li *ngFor="let image of images" class="splide__slide">
+                                    <img [src]="image" alt="Thumbnail" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+    
+                </div>
+    
+            </div>
+            <div class="col-md-6 pt-5">
+                <h2 class="neue-title">Pastry Croissant</h2>
+                <p class="neue-p">We combining a diverse range of shapes, flavors, and presentation elements, you can
+transform the humble croissant into a culinary delight that not only satisfies taste buds but
+also captivates the eyes. Here's how we make our croissants more enticing:</p>
+                
+                <div class="row">
+                    <div class="col-6">
+                        <ul>
+                            <li class="mx-2">Pressed Croissant</li>
+                            <li class="mx-2">Bomboloni Croissant</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li class="mx-2">Muffin Croissant Original</li>
+                            <li class="mx-2">Croissant</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p class="neue-p">
+                   We also make our shape of croissant have a various interesting toppings
+                </p>
+                <a routerLink="/"><button class="btn btn-secondary">Order Now</button></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid p-0 mt-4">
+        <div class="row g-0 product-section2 pt-5 pb-5">
+            <div class="col-md-4 col-12 p-4 product-background2">
+                <div class="product-description">
+                    <h2 class="neue-title">BROWNIES TART</h2>
+                    <p class="neue-pw">
+                        Turning our signature fudge brownies
+                        into a cake-like form for birthdays and
+                        celebrations.
+                    </p>
+                    <a routerLink="/"><button class="btn btn-secondary">Order Now</button></a>
+                </div>
+            </div>
+            <div class="col-md-8 col-12 pt-4">
+                <div class="product-slide-container2 pt-4 pb-4">
+                    <div class="splide" id="tart-slider">
+                            <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide product-section-slide">
+                                    <img src="../../assets/images/Brownies Tart/DSC00664.jpg" class="product-section-img rounded w-100" />
+                                </li>
+                                <li class="splide__slide product-section-slide">
+                                    <img src="../../assets/images/Brownies Tart/DSC00737.jpg" class="product-section-img rounded w-100" />
+                                </li>
+                                <li class="splide__slide product-section-slide">
+                                    <img src="../../assets/images/Brownies Tart/DSC00748.jpg" class="product-section-img rounded w-100" />
+                                </li>
+                                <li class="splide__slide product-section-slide">
+                                    <img src="../../assets/images/Brownies Tart/DSC03968.jpg" class="product-section-img rounded w-100" />
+                                </li>
+                                <li class="splide__slide product-section-slide">
+                                    <img src="../../assets/images/Brownies Tart/DSC03990-Edit.jpg" class="product-section-img rounded w-100" />
+                                </li>
+                                <li class="splide__slide product-section-slide">
+                                    <img src="../../assets/images/Brownies Tart/DSC04003-Edit-2.jpg" class="product-section-img rounded w-100" />
+                                </li>
+                                <li class="splide__slide product-section-slide">
+                                    <img src="../../assets/images/Brownies Tart/DSC04053-Edit.jpg" class="product-section-img rounded w-100" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>

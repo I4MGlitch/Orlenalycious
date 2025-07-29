@@ -1,0 +1,118 @@
+<body id="body">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 pt-5 pb-5">
+                <div class="product-gallery">
+                    <!-- Main Image Slider -->
+                    <div id="detail-main-slider" class="splide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li *ngFor="let image of images" class="splide__slide text-center">
+                                    <a [attr.data-fancybox]="'gallery'" [href]="image">
+                                    <img [src]="image" alt="Product Image" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Thumbnails -->
+                    <div id="detail-thumbnail-slider" class="splide mt-3">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li *ngFor="let image of images" class="splide__slide">
+                                    <img [src]="image" alt="Thumbnail" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+    
+                </div>
+    
+            </div>
+            <div class="col-md-6 pt-5">
+                <h2 class="neue-title">Brownies Tart</h2>
+                <p class="neue-p">From our Brownie Cake Base: Start with a cake-like brownie base that's slightly denser than
+regular cake but still soft, fudge and moist. Here's some our various toppings of birthday tart:</p>
+                
+                <div class="row">
+                    <div class="col-6">
+                        <ul>
+                            <li class="mx-2">Chocodevil Tart</li>
+                            <li class="mx-2">Smores Nutella Tart</li>
+                            <li class="mx-2">Cheese Tart</li>
+                            <li class="mx-2">Red Velvet Tart</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li class="mx-2">Oreo Cookie Tart</li>
+                            <li class="mx-2">Salt Caramel Tart</li>
+                            <li class="mx-2">Green Tea Tart</li>
+                            <li class="mx-2">Birthday Regular Tart</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p class="neue-p">
+                   Turning our signature fudge brownies into a cake-like form for birthdays and celebrations
+                   is a wonderful idea. Here's how we create a special brownie cake that's perfect for
+                   celebrating
+                </p>
+                <a routerLink="/"><button class="btn btn-secondary">Order Now</button></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid p-0 mt-4 pb-4">
+        <hr class="my-4">
+        <div class="row g-0 product-section">
+            <div class="col-md-4 col-12 p-4 product-background">
+                <div class="product-description">
+                    <h2 class="neue-title">Fudge Brownies</h2>
+                    <p class="neue-p">
+                        Creating fudge brownies with a variety of
+                        delicious toppings is a fantastic way to offer
+                        customers a range of flavors and options.
+                    </p>
+                    <a routerLink="/"><button class="btn btn-secondary">Order Now</button></a>
+                </div>
+            </div>
+            <div class="col-md-8 col-12 pt-4 pb-4">
+                <div class="product-slide-container pt-4 pb-4">
+                    <div class="splide" id="brownie-slider">
+                            <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide product-section-slide">
+                                    <img src="../../assets/images/Fudge Brownies/DSC04198.jpg" class="product-section-img rounded w-100" />
+                                </li>
+                                <li class="splide__slide product-section-slide">
+                                    <img src="../../assets/images/Fudge Brownies/DSC04199.jpg" class="product-section-img rounded w-100" />
+                                </li>
+                                <li class="splide__slide product-section-slide">
+                                    <img src="../../assets/images/Fudge Brownies/DSC04201.jpg" class="product-section-img rounded w-100" />
+                                </li>
+                                <li class="splide__slide product-section-slide">
+                                    <img src="../../assets/images/Fudge Brownies/DSC08100.jpg" class="product-section-img rounded w-100" />
+                                </li>
+                                <li class="splide__slide product-section-slide">
+                                    <img src="../../assets/images/Fudge Brownies/DSC07764.jpg" class="product-section-img rounded w-100" />
+                                </li>
+                                <li class="splide__slide product-section-slide">
+                                    <img src="../../assets/images/Fudge Brownies/DSC08075.jpg" class="product-section-img rounded w-100" />
+                                </li>
+                                <li class="splide__slide product-section-slide">
+                                    <img src="../../assets/images/Fudge Brownies/DSC08078.jpg" class="product-section-img rounded w-100" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
