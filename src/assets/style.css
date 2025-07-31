@@ -465,10 +465,11 @@
     font-size: 18px;
 }
 
-.best-seller-img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+.best-seller-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 @media screen and (max-width:992px) {
