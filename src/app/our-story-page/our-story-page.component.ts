@@ -56,6 +56,35 @@ export class OurStoryPageComponent implements AfterViewInit{
       visibleItems: 3,
       horizontalStartPosition: 'bottom'
     });
+
+     new Splide('#csr-slider', {
+      perPage: 2,
+      focus:0,
+      omitEnd: true,
+      gap: '2rem',
+      padding: '4rem',
+      arrows: true,
+      pagination: false,
+      breakpoints: {
+        992: {
+          gap: '0rem',
+          padding: '0rem',
+          perPage: 2,
+        },
+        768: {
+          gap: '0rem',
+          padding: '0rem',
+          perPage: 1,
+        },
+        576: {
+          gap: '0rem',
+          padding: '0rem',
+          perPage: 1,
+        }
+      }
+    }).mount();
+
+
     }
 
 }

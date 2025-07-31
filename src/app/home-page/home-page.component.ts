@@ -36,7 +36,7 @@ export class HomePageComponent implements AfterViewInit{
     },
     breakpoints: {
       1200: {
-        perPage: 3,
+        perPage: 2,
         padding: {
           right: '10%',
         },
@@ -48,9 +48,9 @@ export class HomePageComponent implements AfterViewInit{
         },
       },
       768: {
-        perPage: 1,
+        perPage: 2,
         padding: {
-          right: '25%',
+          right: '15%',
         },
       },
       576: {
@@ -74,7 +74,7 @@ export class HomePageComponent implements AfterViewInit{
     },
     breakpoints: {
       1200: {
-        perPage: 3,
+        perPage: 2,
         padding: {
           right: '10%',
         },

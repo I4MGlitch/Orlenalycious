@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg sticky-top header-navbar shadow shadow-sm">
+<nav class="navbar navbar-expand-lg sticky-top header-navbar shadow shadow-sm" data-bs-spy="scroll" data-bs-target="#navbarOffcanvasLg">
   <div class="container">
     <a class="navbar-brand" routerLink="/">
       <img src="../../assets/images/Orlena-Logo.png" alt="Orlena-Logo" class="navbar-logo">
@@ -15,19 +15,19 @@
       <div class="offcanvas-body d-flex flex-column h-100">
         <div class="menu-wrapper flex-grow-1">
           <ul class="navbar-nav justify-content-center pe-4">
-            <li class="nav-item mx-2 hvr-underline-from-left navbar-underline">
-              <a class="nav-link" routerLink="/">Fudge Brownies</a>
+            <li class="nav-item mx-2 hvr-underline-from-left navbar-underline" (click)="closeOffcanvas()">
+              <a class="nav-link" href="#fudge-brownies">Fudge Brownies</a>
             </li>
-            <li class="nav-item mx-2 hvr-underline-from-left navbar-underline">
-              <a class="nav-link" routerLink="/">Brownies Tart</a>
+            <li class="nav-item mx-2 hvr-underline-from-left navbar-underline" (click)="closeOffcanvas()">
+              <a class="nav-link" href="#brownies-tart">Brownies Tart</a>
             </li>
-            <li class="nav-item mx-2 hvr-underline-from-left navbar-underline">
-              <a class="nav-link" routerLink="/">Pastry Croissant</a>
+            <li class="nav-item mx-2 hvr-underline-from-left navbar-underline" (click)="closeOffcanvas()">
+              <a class="nav-link" href="#pastry-croissant">Pastry Croissant</a>
             </li>
-            <li class="nav-item mx-2 hvr-underline-from-left navbar-underline">
-              <a class="nav-link" routerLink="/">Ice Cream Creation</a>
+            <li class="nav-item mx-2 hvr-underline-from-left navbar-underline" (click)="closeOffcanvas()">
+              <a class="nav-link" href="#ice-cream-creation">Ice Cream Creation</a>
             </li>
-            <li class="nav-item mx-2 hvr-underline-from-left navbar-underline">
+            <li class="nav-item mx-2 hvr-underline-from-left navbar-underline" (click)="closeOffcanvas()">
               <a class="nav-link" routerLink="/our-story">Our Story</a>
             </li>
           </ul>
@@ -35,14 +35,11 @@
 
         <!-- Social Media Icons -->
         <div class="social-icons mt-4 text-center">
-          <a href="https://facebook.com" target="_blank" class="text-dark me-3">
-            <i class="fab fa-facebook fa-lg"></i>
-          </a>
-          <a href="https://instagram.com" target="_blank" class="text-dark me-3">
+          <a href="https://www.instagram.com/orlenalycious/" target="_blank" class="text-dark me-3">
             <i class="fab fa-instagram fa-lg"></i>
           </a>
-          <a href="https://twitter.com" target="_blank" class="text-dark">
-            <i class="fab fa-twitter fa-lg"></i>
+          <a href="https://www.tiktok.com/@orlenalycious" target="_blank" class="text-dark me-3">
+            <i class="fa-brands fa-tiktok"></i>
           </a>
         </div>
       </div>
