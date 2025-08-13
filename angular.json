@@ -32,7 +32,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/meta-pixel.js"
+            ]
           },
           "configurations": {
             "production": {
