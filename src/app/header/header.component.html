@@ -1,48 +1,109 @@
-
-<nav class="navbar navbar-expand-lg sticky-top header-navbar shadow shadow-sm" data-bs-spy="scroll" data-bs-target="#navbarOffcanvasLg">
+<nav class="navbar navbar-expand-lg sticky-top header-navbar shadow shadow-sm" data-bs-spy="scroll"
+  data-bs-target="#navbarOffcanvasLg">
   <div class="container">
-    <a class="navbar-brand" routerLink="/">
+
+    <!-- Logo -->
+    <a class="navbar-brand" routerLink="/" (click)="closeOffcanvas()">
       <img src="../../assets/images/Orlena-Logo.png" alt="Orlena-Logo" class="navbar-logo">
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
+      aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="offcanvas offcanvas-end header-offcanvas" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+
+
+    <!-- Navigation -->
+    <div class="offcanvas offcanvas-end header-offcanvas" tabindex="-1" id="navbarOffcanvasLg"
+      aria-labelledby="navbarOffcanvasLgLabel">
+
+      <!-- Mobile Header -->
       <div class="offcanvas-header">
-        <!-- <h5 class="offcanvas-title" id="navbarOffcanvasLgLabel">Offcanvas</h5> -->
+
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
       </div>
+
+
+      <!-- Menu -->
       <div class="offcanvas-body d-flex flex-column h-100">
+
         <div class="menu-wrapper flex-grow-1">
+
           <ul class="navbar-nav justify-content-center pe-4">
+
+            <!-- Home -->
             <li class="nav-item mx-2 hvr-underline-from-left navbar-underline" (click)="closeOffcanvas()">
-              <a class="nav-link" href="#fudge-brownies">Fudge Brownies</a>
+              <a class="nav-link" routerLink="/">
+                Home
+              </a>
             </li>
+
+
+            <!-- About Us -->
             <li class="nav-item mx-2 hvr-underline-from-left navbar-underline" (click)="closeOffcanvas()">
-              <a class="nav-link" href="#brownies-tart">Brownies Tart</a>
+              <a class="nav-link" href="#brand-mission">
+                About Us
+              </a>
             </li>
+
+
+            <!-- Baked Goods -->
             <li class="nav-item mx-2 hvr-underline-from-left navbar-underline" (click)="closeOffcanvas()">
-              <a class="nav-link" href="#pastry-croissant">Pastry Croissant</a>
+              <a class="nav-link" href="#baked-goods">
+                Baked Goods
+              </a>
             </li>
+
+
+            <!-- Location -->
             <li class="nav-item mx-2 hvr-underline-from-left navbar-underline" (click)="closeOffcanvas()">
-              <a class="nav-link" href="#ice-cream-creation">Ice Cream Creation</a>
+              <a class="nav-link" href="#outlet">
+                Location
+              </a>
             </li>
+
+
+            <!-- Collaboration -->
             <li class="nav-item mx-2 hvr-underline-from-left navbar-underline" (click)="closeOffcanvas()">
-              <a class="nav-link" routerLink="/our-story">Our Story</a>
+              <a class="nav-link" href="#collaboration">
+                Collaboration
+              </a>
             </li>
+
+
+            <!-- Our Story -->
+            <li class="nav-item mx-2 hvr-underline-from-left navbar-underline" (click)="closeOffcanvas()">
+              <a class="nav-link" routerLink="/our-story">
+                Our Story
+              </a>
+            </li>
+
           </ul>
+
         </div>
 
-        <!-- Social Media Icons -->
+
+        <!-- Social Media -->
         <div class="social-icons mt-4 text-center">
-          <a href="https://www.instagram.com/orlenalycious/" target="_blank" class="text-dark me-3">
+
+          <a href="https://www.instagram.com/orlenalycious/" target="_blank" rel="noopener noreferrer"
+            class="text-dark me-3" aria-label="Instagram">
             <i class="fab fa-instagram fa-lg"></i>
           </a>
-          <a href="https://www.tiktok.com/@orlenalycious" target="_blank" class="text-dark me-3">
+
+          <a href="https://www.tiktok.com/@orlenalycious" target="_blank" rel="noopener noreferrer"
+            class="text-dark me-3" aria-label="TikTok">
             <i class="fa-brands fa-tiktok"></i>
           </a>
+
         </div>
+
       </div>
+
     </div>
+
   </div>
 </nav>

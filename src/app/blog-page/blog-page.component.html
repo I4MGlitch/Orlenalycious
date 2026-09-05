@@ -1,0 +1,65 @@
+<section class="blog-page">
+
+  <!-- Page Header -->
+  <div class="blog-page-header">
+    <div class="container">
+
+      <span class="blog-page-eyebrow">
+        Orlena Journal
+      </span>
+
+      <h1 class="blog-page-title">
+        What's on Orlena
+      </h1>
+
+      <p class="blog-page-intro">
+        Stories, updates, and moments from our journey.
+      </p>
+
+    </div>
+  </div>
+
+
+  <!-- Blog List -->
+  <div class="blog-page-content">
+    <div class="container">
+
+      <div class="blog-list">
+
+        <article class="blog-page-card" *ngFor="let blog of blogs">
+
+          <!-- Image -->
+          <a [routerLink]="['/blog', blog.slug]" class="blog-page-image">
+            <img [src]="blog.image" [alt]="blog.title" />
+          </a>
+
+          <!-- Content -->
+          <div class="blog-page-card-content">
+
+            <span class="blog-page-category">
+              {{ blog.category }}
+            </span>
+
+            <h2 class="blog-page-card-title">
+              {{ blog.title }}
+            </h2>
+
+            <p class="blog-page-card-excerpt">
+              {{ blog.excerpt }}
+            </p>
+
+            <a [routerLink]="['/blog', blog.slug]" class="blog-page-read-more">
+              Read More
+              <span>→</span>
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
