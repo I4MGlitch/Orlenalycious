@@ -5,21 +5,35 @@ declare var bootstrap: any;
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-   closeOffcanvas(): void {
-    const offcanvasElement = document.getElementById('navbarOffcanvasLg');
-    if (offcanvasElement) {
-      const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
-      if (bsOffcanvas) {
-        bsOffcanvas.hide();
-      }
+
+  closeOffcanvas(): void {
+
+    const offcanvasElement =
+      document.getElementById('navbarOffcanvasLg');
+
+    if (!offcanvasElement) {
+      return;
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const bootstrapInstance =
+      (window as any).bootstrap;
+
+    if (!bootstrapInstance) {
+      return;
+    }
+
+    const offcanvas =
+      bootstrapInstance.Offcanvas.getInstance(
+        offcanvasElement
+      );
+
+    if (offcanvas) {
+      offcanvas.hide();
+    }
+
   }
 
-  scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
 }

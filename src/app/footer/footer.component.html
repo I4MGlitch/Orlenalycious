@@ -1,50 +1,111 @@
-<div id="footer">
-    <div class="container">
-        <div class="row pt-5 pb-5">
-            <div class="col-md-3 col-12 p-4">
-                    <div class="row">
-                        <div class="col-md-12 col-6">
-                            <img src="../../assets/images/Orlena-Logo.png" class="footer-logo" />
-                        </div>
-                        <div class="col-md-12 col-6 text-center">
-                            <img src="../../assets/images/ID51110019402520824-label.png" class="img-fluid w-50">
-                        </div>
-                    </div>
-            </div>
-            <div class="col-md-3 col-12 p-4">
-                <p class="neue-p3">Quick Links</p>
-                <ul>
-                    <li class="mt-2" (click)="closeOffcanvas()"><a href="#fudge-brownies" class="neue-p">Fudge Brownies</a></li>
-                    <li class="mt-2" (click)="closeOffcanvas()"><a href="#brownies-tart" class="neue-p">Brownies Tart</a></li>
-                    <li class="mt-2" (click)="closeOffcanvas()"><a href="#pastry-croissant" class="neue-p">Pastry Croissant</a></li>
-                    <li class="mt-2" (click)="closeOffcanvas()"><a href="#ice-cream-creation" class="neue-p">Ice Cream Creation</a></li>
-                    <li class="mt-2" (click)="scrollToTop()" (click)="closeOffcanvas()"><a routerLink="/our-story" class="neue-p">Our Story</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 col-12 p-4">
-                <p class="neue-p3">Customer Service</p>
-                <ul>
-                    <li class="mt-2"><p class="neue-p">ORLENALYCIOUS@GMAIL.COM</p></li>
-                    <li class="mt-2"><p class="neue-p">All Day Being Your Happiness, 8:00am - 21:00pm</p></li>
-                    <li class="mt-2"><p class="neue-p">+62821-4580-9558</p></li>
-                </ul>
-            </div>
-            <div class="col-md-3 col-12 p-4">
-                <p class="neue-p3">Follow Us</p>
-                <div class="d-flex gap-3">
-                    <a href="https://www.instagram.com/orlenalycious/" target="_blank" class="neue-p3"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@orlenalycious" target="_blank" class="neue-p3"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-            </div>
+<footer class="or-footer" id="footer">
+
+  <div class="container">
+
+    <div class="or-footer-main">
+
+      <!-- BRAND -->
+      <div class="or-footer-brand">
+
+        <a routerLink="/" class="or-footer-logo-link">
+          <img src="../../assets/images/Orlena-Logo.png" alt="Orlena" class="or-footer-logo">
+        </a>
+
+        <div class="or-footer-certification">
+          <img src="../../assets/images/ID51110019402520824-label.png" alt="Halal" class="or-footer-halal">
         </div>
-    </div>
-</div>
-<div id="copyright">
-    <div class="container">
-        <div class="row mt-3">
-            <div class="col-md-12 text-center">
-                <p class="neue-p2">Copyright © 2025 Orlena.</p>
-            </div>
+
+      </div>
+
+
+      <!-- QUICK LINKS -->
+      <div class="or-footer-column">
+
+        <h3 class="or-footer-heading">
+          Quick Links
+        </h3>
+
+        <nav class="or-footer-links">
+
+          <a routerLink="/about">
+            About
+          </a>
+
+          <a [routerLink]="['/']" fragment="baked-goods">
+            Baked Goods
+          </a>
+
+          <a [routerLink]="['/']" fragment="outlet">
+            Location
+          </a>
+
+          <a [routerLink]="['/']" fragment="collaboration">
+            Collaboration
+          </a>
+
+        </nav>
+
+      </div>
+
+
+      <!-- EXPLORE -->
+      <div class="or-footer-column">
+
+        <h3 class="or-footer-heading">
+          Explore
+        </h3>
+
+        <nav class="or-footer-links">
+
+          <a routerLink="/blog">
+            What's on Orlena
+          </a>
+
+        </nav>
+
+      </div>
+
+
+      <!-- FOLLOW -->
+      <div class="or-footer-column">
+
+        <h3 class="or-footer-heading">
+          Follow Us
+        </h3>
+
+        <div class="or-footer-links">
+
+          <!--
+            Gunakan URL social media Orlena existing
+            pada href di bawah.
+          -->
+
+          <a href="https://www.instagram.com/orlenalycious?stkn=MXQ2MXVoOGlzdDRiMw%3D%3D&utm_source=qr" target="_blank"
+            rel="noopener noreferrer">
+            Instagram
+          </a>
+
+          <a href="https://www.tiktok.com/@orlenalycious?_r=1&_t=ZS-99kavu7CFts" target="_blank"
+            rel="noopener noreferrer">
+            TikTok
+          </a>
+
         </div>
+
+      </div>
+
     </div>
-</div>
+
+
+    <!-- BOTTOM -->
+    <div class="or-footer-bottom">
+
+      <p>
+        © 2026 Orlena
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>

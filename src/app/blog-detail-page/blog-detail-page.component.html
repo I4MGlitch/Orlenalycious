@@ -3,16 +3,12 @@
   *ngIf="blog"
 >
 
-  <!-- Hero -->
+  <!-- =====================================
+       HEADER
+  ====================================== -->
   <header class="blog-detail-header">
-    <div class="container">
 
-      <a
-        routerLink="/blog"
-        class="blog-detail-back"
-      >
-        ← Back to What's on Orlena
-      </a>
+    <div class="container">
 
       <span class="blog-detail-category">
         {{ blog.category }}
@@ -23,82 +19,109 @@
       </h1>
 
     </div>
+
   </header>
 
 
-  <!-- Featured Image -->
+  <!-- =====================================
+       FEATURED IMAGE
+  ====================================== -->
   <section class="blog-detail-featured">
+
     <div class="container">
 
       <div class="blog-detail-image">
+
         <img
           [src]="blog.image"
           [alt]="blog.title"
         />
+
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- Article -->
+  <!-- =====================================
+       ARTICLE CONTENT
+  ====================================== -->
   <article class="blog-detail-article">
+
     <div class="container">
 
       <div class="blog-detail-content">
 
         <ng-container
-          *ngFor="let paragraph of blog.paragraphs; let i = index"
+          *ngFor="let item of blog.content"
         >
 
+          <!-- PARAGRAPH -->
+          <p
+            *ngIf="item.type === 'paragraph'"
+            class="blog-detail-paragraph"
+          >
+            {{ item.text }}
+          </p>
+
+
+          <!-- SUB HEADING -->
           <h2
-            *ngIf="blog.subheading && i === 1"
+            *ngIf="item.type === 'heading'"
             class="blog-detail-subheading"
           >
-            {{ blog.subheading }}
+            {{ item.text }}
           </h2>
-
-          <p class="blog-detail-paragraph">
-            {{ paragraph }}
-          </p>
 
         </ng-container>
 
       </div>
 
     </div>
+
   </article>
 
 
-  <!-- Back -->
+  <!-- =====================================
+       BACK TO BLOG
+  ====================================== -->
   <div class="blog-detail-footer">
+
     <div class="container">
 
       <a
         routerLink="/blog"
         class="blog-detail-back-button"
       >
-        ← Back to What's on Orlena
+        Back to What's on Orlena
       </a>
 
     </div>
+
   </div>
 
 </section>
 
 
-<!-- Article Not Found -->
+<!-- =====================================
+     BLOG NOT FOUND
+====================================== -->
 <section
   class="blog-not-found"
   *ngIf="!blog"
 >
+
   <div class="container">
 
-    <h1>Blog not found</h1>
+    <h1>
+      Blog not found
+    </h1>
 
     <a routerLink="/blog">
       Back to What's on Orlena
     </a>
 
   </div>
+
 </section>

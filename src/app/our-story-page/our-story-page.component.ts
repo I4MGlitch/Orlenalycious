@@ -1,90 +1,70 @@
 import { Component, AfterViewInit } from '@angular/core';
 
+import { OUTLETS, Outlet } from '../data/outlets';
+
 declare var Splide: any;
-declare var timeline: any;
 
 @Component({
   selector: 'app-our-story-page',
   templateUrl: './our-story-page.component.html',
-  styleUrls: ['./our-story-page.component.css']
+  styleUrls: ['./our-story-page.component.css'],
 })
-export class OurStoryPageComponent implements AfterViewInit{
+export class OurStoryPageComponent implements AfterViewInit {
+  outlets: Outlet[] = OUTLETS;
 
   ngAfterViewInit(): void {
-       new Splide('#outlet-slider', {
-      perPage: 4,
-      focus:0,
-      omitEnd: true,
-      gap: '1rem',
-      arrows: false,
-      pagination: false,
-      breakpoints: {
-        992: {
-          perPage: 3,
-        },
-        768: {
-          perPage: 2.5,
-        },
-        576: {
-          perPage: 2.5,
-        }
-      }
-    }).mount();
+    const outletSlider = document.querySelector('#about-outlet-slider');
 
-    new Splide('#collab-slider', {
-      perPage: 4,
-      focus:0,
-      omitEnd: true,
-      gap: '1rem',
-      arrows: false,
-      pagination: true,
-      breakpoints: {
-        992: {
-          perPage: 3,
-        },
-        768: {
-          perPage: 2.5,
-        },
-        576: {
-          perPage: 2.5,
-        }
-      }
-    }).mount();
-
-     timeline(document.querySelectorAll('#timeline'), {
-      mode: 'horizontal',
-      visibleItems: 3,
-      horizontalStartPosition: 'bottom'
-    });
-
-     new Splide('#csr-slider', {
-      perPage: 2,
-      focus:0,
-      omitEnd: true,
-      gap: '2rem',
-      padding: '4rem',
-      arrows: true,
-      pagination: false,
-      breakpoints: {
-        992: {
-          gap: '0rem',
-          padding: '0rem',
-          perPage: 2,
-        },
-        768: {
-          gap: '0rem',
-          padding: '0rem',
-          perPage: 1,
-        },
-        576: {
-          gap: '0rem',
-          padding: '0rem',
-          perPage: 1,
-        }
-      }
-    }).mount();
-
-
+    if (!outletSlider) {
+      return;
     }
 
+    new Splide('#about-outlet-slider', {
+      type: 'slide',
+
+      perPage: 4,
+      perMove: 1,
+
+      gap: '1.25rem',
+
+      arrows: false,
+      pagination: false,
+
+      drag: true,
+      snap: true,
+
+      speed: 400,
+
+      flickPower: 300,
+      flickMaxPages: 1,
+
+      dragMinThreshold: {
+        touch: 5,
+        mouse: 0,
+      },
+
+      breakpoints: {
+        1200: {
+          perPage: 3,
+          gap: '1rem',
+        },
+
+        992: {
+          perPage: 2.5,
+          gap: '1rem',
+        },
+
+        768: {
+          perPage: 1.6,
+          gap: '1rem',
+        },
+
+        576: {
+          perPage: 1,
+          fixedWidth: '84%',
+          gap: '1rem',
+        },
+      },
+    }).mount();
+  }
 }

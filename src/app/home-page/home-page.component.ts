@@ -1,4 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { OUTLETS, Outlet } from '../data/outlets';
+import { BLOGS, Blog } from '../data/blogs';
 
 declare var Splide: any;
 @Component({
@@ -7,6 +9,9 @@ declare var Splide: any;
   styleUrls: ['./home-page.component.css'],
 })
 export class HomePageComponent implements AfterViewInit {
+  blogs: Blog[] = BLOGS;
+  outlets: Outlet[] = OUTLETS;
+
   truncateText(text: string, maxLength: number = 100): string {
     if (text.length <= maxLength) {
       return text;
@@ -14,30 +19,23 @@ export class HomePageComponent implements AfterViewInit {
 
     return text.substring(0, maxLength).trim() + '...';
   }
-  blogs = [
+
+  brandCollaborations = [
     {
-      category: 'Orlena Cafe Jimbaran',
-      title: 'A New Way to Enjoy Our #BitesofHappiness: Meet Orlena Café',
-      excerpt:
-        "After 8 years of serving accessible desserts, especially our beloved brownies, through our grab-and-go stores, we're finally taking a step further by creating a new way for you to experience and enjoy our Bites of Happiness.",
-      image: 'assets/images/blog/blog-01.jpg',
-      slug: 'orlena-cafe',
+      name: 'Garuda',
+      image: '../../assets/images/collaboration/garuda.jpg',
     },
     {
-      category: 'Orlena CSR',
-      title: 'Bringing Happiness Beyond Our Brand Through Orlena CSR',
-      excerpt:
-        'At Orlena, we believe #BitesofHappiness should not stop with us. It should create a circle of happiness that grows bigger and gives back to society.',
-      image: 'assets/images/blog/blog-01.jpg',
-      slug: 'orlena-csr',
+      name: 'KitKat',
+      image: '../../assets/images/collaboration/kitkat.png',
     },
     {
-      category: 'Orlena CSR',
-      title: 'Bringing Happiness Beyond Our Brand Through Orlena CSR',
-      excerpt:
-        'At Orlena, we believe #BitesofHappiness should not stop with us. It should create a circle of happiness that grows bigger and gives back to society.',
-      image: 'assets/images/blog/blog-01.jpg',
-      slug: 'orlena-csr',
+      name: 'Kopi Kenangan',
+      image: '../../assets/images/collaboration/kopi-kenangan.jpg',
+    },
+    {
+      name: 'Milo',
+      image: '../../assets/images/collaboration/milo.png',
     },
   ];
 
@@ -60,44 +58,49 @@ export class HomePageComponent implements AfterViewInit {
 
     new Splide('#baked-goods-slider', {
       type: 'slide',
+
       perPage: 4,
+      perMove: 1,
+
       gap: '1.25rem',
+
       arrows: false,
       pagination: false,
-      padding: {
-        left: 0,
-        right: '8%',
+
+      drag: true,
+      snap: true,
+
+      speed: 400,
+      flickPower: 300,
+      flickMaxPages: 1,
+
+      dragMinThreshold: {
+        touch: 5,
+        mouse: 0,
       },
+
       breakpoints: {
         1200: {
           perPage: 3,
           gap: '1rem',
-          padding: {
-            right: '8%',
-          },
         },
 
         992: {
-          perPage: 2.5,
+          perPage: 2,
           gap: '1rem',
-          padding: {
-            right: '10%',
-          },
         },
 
         768: {
-          perPage: 2.25,
+          perPage: 2,
           gap: '1rem',
-          padding: {
-            right: '12%',
-          },
         },
 
         576: {
-          perPage: 1.25,
+          perPage: 1,
+          fixedWidth: '78%',
           gap: '1rem',
           padding: {
-            right: '18%',
+            right: '22%',
           },
         },
       },
@@ -105,149 +108,156 @@ export class HomePageComponent implements AfterViewInit {
 
     new Splide('#blog-slider', {
       type: 'slide',
+
       perPage: 3,
+      perMove: 1,
+
       gap: '1.5rem',
+
       arrows: false,
       pagination: false,
 
+      drag: true,
+      snap: true,
+
+      speed: 400,
+      flickPower: 300,
+      flickMaxPages: 1,
+
+      dragMinThreshold: {
+        touch: 5,
+        mouse: 0,
+      },
+
       breakpoints: {
+        1200: {
+          perPage: 3,
+          gap: '1.25rem',
+        },
+
         992: {
           perPage: 2,
           gap: '1.25rem',
         },
 
         768: {
-          perPage: 1.15,
+          perPage: 1,
+          fixedWidth: '88%',
           gap: '1rem',
           padding: {
-            right: '15%',
+            right: '12%',
           },
         },
 
         576: {
-          perPage: 1.1,
+          perPage: 1,
+          fixedWidth: '88%',
           gap: '1rem',
           padding: {
-            right: '15%',
-          },
-        },
-      },
-    }).mount();
-
-    new Splide('#brownie-slider', {
-      type: 'loop',
-      perPage: 3,
-      focus: 'left',
-      arrows: false,
-      pagination: false,
-      padding: {
-        left: 0,
-        right: '15%', // tampilkan setengah dari slide ke-4
-      },
-      breakpoints: {
-        1200: {
-          perPage: 2,
-          padding: {
-            right: '10%',
-          },
-        },
-        992: {
-          perPage: 2,
-          padding: {
-            right: '15%',
-          },
-        },
-        768: {
-          perPage: 2,
-          padding: {
-            right: '15%',
-          },
-        },
-        576: {
-          perPage: 1,
-          padding: {
-            right: '20%',
-          },
-        },
-      },
-    }).mount();
-
-    new Splide('#tart-slider', {
-      type: 'loop',
-      perPage: 3,
-      focus: 'left',
-      arrows: false,
-      pagination: false,
-      padding: {
-        left: 0,
-        right: '15%', // tampilkan setengah dari slide ke-4
-      },
-      breakpoints: {
-        1200: {
-          perPage: 2,
-          padding: {
-            right: '10%',
-          },
-        },
-        992: {
-          perPage: 2,
-          padding: {
-            right: '15%',
-          },
-        },
-        768: {
-          perPage: 1,
-          padding: {
-            right: '25%',
-          },
-        },
-        576: {
-          perPage: 1,
-          padding: {
-            right: '20%',
+            right: '12%',
           },
         },
       },
     }).mount();
 
     new Splide('#outlet-slider', {
+      type: 'slide',
+
       perPage: 4,
-      focus: 0,
-      omitEnd: true,
-      gap: '1rem',
+      perMove: 1,
+
+      gap: '1.25rem',
+
       arrows: false,
       pagination: false,
+
+      drag: true,
+      snap: true,
+
+      speed: 400,
+
+      flickPower: 300,
+      flickMaxPages: 1,
+
+      dragMinThreshold: {
+        touch: 5,
+        mouse: 0,
+      },
+
       breakpoints: {
-        992: {
+        1200: {
           perPage: 3,
+          gap: '1rem',
         },
+
+        992: {
+          perPage: 2.5,
+          gap: '1rem',
+        },
+
         768: {
-          perPage: 2.5,
+          perPage: 1.6,
+          gap: '1rem',
         },
+
         576: {
-          perPage: 2.5,
+          perPage: 1,
+          fixedWidth: '84%',
+          gap: '1rem',
         },
       },
     }).mount();
 
-    new Splide('#collab-slider', {
-      perPage: 4,
-      focus: 0,
-      omitEnd: true,
-      gap: '1rem',
-      arrows: false,
-      pagination: true,
-      breakpoints: {
-        992: {
-          perPage: 3,
+    const collaborationSlider = document.querySelector('#collaboration-slider');
+
+    if (collaborationSlider) {
+      new Splide('#collaboration-slider', {
+        type: 'slide',
+
+        perPage: 4,
+        perMove: 1,
+
+        gap: '1.5rem',
+
+        arrows: false,
+        pagination: false,
+
+        drag: true,
+        snap: true,
+
+        speed: 400,
+
+        flickPower: 300,
+        flickMaxPages: 1,
+
+        dragMinThreshold: {
+          touch: 5,
+          mouse: 0,
         },
-        768: {
-          perPage: 2.5,
+
+        breakpoints: {
+          1200: {
+            perPage: 3,
+            gap: '1.25rem',
+          },
+
+          992: {
+            perPage: 2.5,
+            gap: '1rem',
+          },
+
+          768: {
+            perPage: 1.6,
+            gap: '1rem',
+          },
+
+          576: {
+            perPage: 1,
+            fixedWidth: '85%',
+            gap: '1rem',
+          },
         },
-        576: {
-          perPage: 2.5,
-        },
-      },
-    }).mount();
+      }).mount();
+    }
   }
 }
