@@ -41,6 +41,12 @@
               </div>
             </li>
 
+            <li class="splide__slide slide-img">
+              <div class="slide-wrapper">
+                <img src="assets/images/hero-section/Header orlena-07.jpg" alt="Orlena" />
+              </div>
+            </li>
+
           </ul>
         </div>
       </div>
@@ -98,6 +104,18 @@
               </div>
             </li>
 
+            <!-- Choco Layer -->
+            <li class="splide__slide">
+              <a href="#" class="baked-category-card">
+                <div class="baked-category-image">
+                  <img src="assets/images/baked-goods-section/Choco Layer/Choco-Layer-07.png" alt="Choco Layer">
+                </div>
+                <div class="baked-category-content">
+                  <h3>Choco Layer</h3>
+                </div>
+              </a>
+            </li>
+
             <!-- Brownies Cheesecake -->
             <li class="splide__slide">
               <a href="#" class="baked-category-card">
@@ -107,18 +125,6 @@
                 </div>
                 <div class="baked-category-content">
                   <h3>Brownies Cheesecake</h3>
-                </div>
-              </a>
-            </li>
-
-            <!-- Choco Layer -->
-            <li class="splide__slide">
-              <a href="#" class="baked-category-card">
-                <div class="baked-category-image">
-                  <img src="assets/images/baked-goods-section/Choco Layer/Choco-Layer-07.png" alt="Choco Layer">
-                </div>
-                <div class="baked-category-content">
-                  <h3>Choco Layer</h3>
                 </div>
               </a>
             </li>
@@ -228,13 +234,16 @@
   <!-- =====================================
      BRAND COLLABORATION
 ====================================== -->
+
   <section class="brand-collaboration-section" id="collaboration">
     <div class="container">
 
       <div class="brand-collaboration-header">
+
         <h2 class="brand-collaboration-title">
           Brand Collaboration
         </h2>
+
       </div>
 
 
@@ -248,16 +257,24 @@
 
               <article class="brand-collaboration-card">
 
+                <!-- IMAGE -->
                 <div class="brand-collaboration-image">
 
                   <img [src]="collaboration.image" [alt]="'Orlena x ' + collaboration.name">
 
                 </div>
 
+
+                <!-- CONTENT -->
                 <div class="brand-collaboration-info">
 
-                  <h3>
-                    {{ collaboration.name }}
+                  <span class="brand-collaboration-name">
+                    Orlena x {{ collaboration.name }}
+                  </span>
+
+
+                  <h3 class="brand-collaboration-headline">
+                    {{ collaboration.headline }}
                   </h3>
 
                 </div>

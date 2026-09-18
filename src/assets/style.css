@@ -587,17 +587,16 @@
 ========================================= */
 
 .brand-mission-title {
-  max-width: 1000px;
-
+  max-width: 1100px;
   margin: 0 auto;
 
-  font-family: 'neueRegredeMedium';
+  font-family: "Neue Regrade", serif;
   font-size: 52px;
-  font-weight: normal;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  font-weight: 400;
+  line-height: 1.05;
 
-  color: #3B0304 !important;
+  text-align: center;
+  color: #3B0304;
 }
 
 
@@ -1963,90 +1962,46 @@
 
 }
 
+
 /* =========================================
    BRAND COLLABORATION
 ========================================= */
 
 .brand-collaboration-section {
-  position: relative;
-
-  padding: 110px 0 120px;
-
-  overflow: hidden;
-
+  padding: 100px 0;
   background-color: #F7E5DC;
 }
 
-
-/* =========================================
-   HEADER
-========================================= */
-
 .brand-collaboration-header {
-  margin-bottom: 45px;
-
-  text-align: center;
+  margin-bottom: 48px;
 }
 
 .brand-collaboration-title {
   margin: 0;
+  color: #3B0304;
 
-  font-family: 'neueRegredeMedium';
-  font-size: 54px;
-  font-weight: normal;
+  font-family: "Neue Regrade", serif;
+  font-size: 48px;
+  font-weight: 500;
   line-height: 1.05;
-
-  color: #3B0304 !important;
 }
 
 
-/* =========================================
-   SLIDER
-========================================= */
-
-.brand-collaboration-slider {
-  width: 100%;
-}
-
-.brand-collaboration-slider .splide__track {
-  overflow: visible;
-}
-
-.brand-collaboration-slider .splide__list {
-  align-items: stretch;
-}
-
-.brand-collaboration-slider .splide__slide {
-  height: auto;
-
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-
-/* =========================================
-   CARD
-========================================= */
+/* CARD */
 
 .brand-collaboration-card {
-  width: 100%;
+  height: 100%;
 }
 
 
-/* =========================================
-   IMAGE
-========================================= */
+/* IMAGE */
 
 .brand-collaboration-image {
-  position: relative;
-
   width: 100%;
-
   aspect-ratio: 4 / 5;
 
   overflow: hidden;
-
-  border-radius: 16px;
+  border-radius: 18px;
 
   background-color: #F7DBB3;
 }
@@ -2059,33 +2014,50 @@
 
   object-fit: cover;
 
-  transition:
-    transform 0.55s ease;
+  transition: transform 0.45s ease;
 }
 
 .brand-collaboration-card:hover .brand-collaboration-image img {
-  transform: scale(1.035);
+  transform: scale(1.025);
 }
 
 
-/* =========================================
-   BRAND NAME
-========================================= */
+/* CONTENT */
 
 .brand-collaboration-info {
-  padding-top: 18px;
+  padding-top: 24px;
 }
 
-.brand-collaboration-info h3 {
-  margin: 0;
+.brand-collaboration-name {
+  display: block;
 
-  font-family: 'neueRegredeMedium';
-  font-size: 22px;
-  font-weight: normal;
-  line-height: 1.25;
+  margin-bottom: 12px;
 
-  color: #3B0304 !important;
+  color: #DB3E4C;
+
+  font-family: "Aileron", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
+
+.brand-collaboration-headline {
+  margin: 0 0 14px;
+
+  color: #3B0304;
+
+  font-family: "Neue Regrade", serif;
+  font-size: 24px;
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+
 
 
 /* =========================================
@@ -2095,11 +2067,15 @@
 @media screen and (max-width: 992px) {
 
   .brand-collaboration-section {
-    padding: 90px 0 100px;
+    padding: 80px 0;
   }
 
   .brand-collaboration-title {
-    font-size: 46px;
+    font-size: 42px;
+  }
+
+  .brand-collaboration-headline {
+    font-size: 22px;
   }
 
 }
@@ -2109,59 +2085,41 @@
    MOBILE
 ========================================= */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
 
   .brand-collaboration-section {
-    padding: 70px 0 80px;
+    padding: 64px 0;
   }
 
   .brand-collaboration-header {
-    margin-bottom: 30px;
-
-    padding: 0 20px;
-
-    text-align: left;
+    margin-bottom: 32px;
   }
 
   .brand-collaboration-title {
-    font-size: 40px;
+    font-size: 36px;
   }
 
-  .brand-collaboration-slider {
-    padding-left: 20px;
+  .brand-collaboration-image {
+    border-radius: 14px;
   }
 
   .brand-collaboration-info {
-    padding-top: 15px;
+    padding-top: 20px;
   }
 
-  .brand-collaboration-info h3 {
-    font-size: 19px;
+  .brand-collaboration-name {
+    margin-bottom: 10px;
+
+    font-size: 11px;
   }
 
-  .brand-collaboration-card:hover .brand-collaboration-image img {
-    transform: none;
-  }
+  .brand-collaboration-headline {
+    margin-bottom: 12px;
 
-}
-
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media screen and (max-width: 576px) {
-
-  .brand-collaboration-title {
-    font-size: 34px;
-  }
-
-  .brand-collaboration-info h3 {
-    font-size: 18px;
+    font-size: 22px;
   }
 
 }
-
 
 
 /* =========================================

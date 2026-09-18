@@ -26,7 +26,7 @@ export const OUTLETS: Outlet[] = [
     name: 'Orlena Sidakarya',
     address:
       'Jl. Bedugul 31, Ruko No-6, Sidakarya, Denpasar Selatan, Kota Denpasar, Bali 80225',
-    image: '../../assets/images/outlet3.jpg',
+    image: '../../assets/images/outlet6.jpg',
     alt: 'Orlena Panjer Denpasar Selatan',
     mapsUrl: 'https://maps.app.goo.gl/JDUQ7Lu53RzTbVPEA',
   },
